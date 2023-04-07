@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+    <table th:border="1">
+
+        <tr>
+            <th class="first"> Id</th>
+            <th class="first"> Model</th>
+            <th class="first"> releaseYear</th>
+        </tr>
+
+        <tr th:each="msg : ${list}" >
+            <td th:text="${msg.getId()}"></td>
+            <td th:text="${msg.getModel()}"></td>
+            <td th:text="${msg.getReleaseYear()}"></td>
+        </tr>
+
+    </table>
+
+
+</div>
+</body>
+</html>
+
